@@ -1,6 +1,10 @@
 import { getPost } from "@/lib/db";
 import Link from "next/link";
 
+// 读实时 MySQL + 用 [slug] 动态参数，必须动态渲染（每次请求现查）
+// Next 16 cacheComponents 模式下改用 instant = false（阻塞式动态路由）
+export const instant = false;
+
 export default async function BlogPost({
   params,
 }: {

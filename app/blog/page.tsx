@@ -1,6 +1,11 @@
 import { getAllPosts } from "@/lib/db";
 import Link from "next/link";
 
+// 这个页面读的是「实时 MySQL」，不能在构建时预渲染成静态
+// Next 16 开启 cacheComponents 后禁用旧的 dynamic = "force-dynamic"
+// 改用 instant = false：标记为阻塞式动态路由，每次请求现查数据库
+export const instant = false;
+
 export default async function BlogIndex() {
   // 从 MySQL 查出全部文章（只取列表需要的字段）
   const posts = await getAllPosts();
