@@ -38,6 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Link className="text-zinc-950 dark:text-zinc-50" href="/contact">
             联系
           </Link>
+          <Link className="text-zinc-950 dark:text-zinc-50" href="/blog">
+            博客
+          </Link>
         </nav>
         {children}
       </body>
