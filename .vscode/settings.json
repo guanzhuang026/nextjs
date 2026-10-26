@@ -1,0 +1,7 @@
+{
+  // 让 VS Code 优先使用项目自带的 TypeScript（node_modules 里的 5.9.3），
+  // 而不是 VS Code 内置版本——避免内置版本与 @types/react 的关联故障。
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // 打开窗口时主动提示"是否使用工作区版本"，选一次即可
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
